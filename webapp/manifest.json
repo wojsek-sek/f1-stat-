@@ -76,11 +76,27 @@
         "clearControlAggregation": false
       },
       "routes": [
+         {
+                    "name": "drivers",
+                    "pattern": "drivers",
+                    "target": [
+                        "drivers"
+                    ]
+                },
         {
-          "name": "Routemain_view",
-          "pattern": "Routemain_view",
-          "target": ["Targetmain_view"]
-        }
+                    "name": "main_view",
+                    "pattern": "main_view",
+                    "target": [
+                        "main_view"
+                    ]
+                },
+         {
+                    "name": "circuits",
+                    "pattern": "circuits",
+                    "target": [
+                        "circuits"
+                    ]
+                }
       ],
       "targets": {
         "Targetmain_view": {
@@ -89,7 +105,19 @@
           "clearControlAggregation": false,
           "viewId": "main_view",
           "viewName": "main_view"
-        }
+        },
+         "drivers": {
+                    "viewType": "XML",
+                    "viewName": "drivers"
+                },
+        "main_view": {
+                    "viewType": "XML",
+                    "viewName": "main_view"
+                },
+        "circuits": {
+                    "viewType": "XML",
+                    "viewName": "circuits"
+                }
       }
     }
   }

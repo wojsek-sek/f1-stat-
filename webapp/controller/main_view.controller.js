@@ -10,6 +10,14 @@ sap.ui.define([
 		return Controller.extend("f1.f1stat.controller.main_view", {
 			onInit: function () {
 
-			}
+            },
+            onPressDrivers: function(){
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
+                oRouter.navTo("drivers");
+            },
+            onPressCircuits: function(){
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
+                oRouter.navTo("circuits");
+            }
 		});
 	});

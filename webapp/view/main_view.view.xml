@@ -3,12 +3,15 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
+    
 >
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}">
+				<Page id="page" title="{i18n>title}" >
 					<content />
+                    <Button text="Go to Drivers Page" press="onPressDrivers"></Button>
+                    <Button text="Go to Cicuits Page" press="onPressCircuits"></Button>
 				</Page>
 			</pages>
 		</App>
