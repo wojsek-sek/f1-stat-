@@ -1,1 +1,41 @@
 /* Enter your custom styles here */
+.button-middle{ 
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    animation-name: rotate;
+    animation-duration: 0.7s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.f1{ 
+    position: absolute;
+    left: 38%;
+    top: 30%;
+    width: 300px;
+    height: 300px;
+    animation-name: rotate;
+    animation-duration: 0.7s;
+}
+
+.main-back { 
+    background-color: darkgrey;
+}
+.welcome { 
+    font-size: large;
+    position: absolute;
+    left: 42%;
+    top: 15%;
+    animation-name: rotate;
+    animation-duration: 0.7s;
+}
+.year{ 
+    width: 250px;
+    
+}

@@ -18,6 +18,10 @@ sap.ui.define([
             onPressCircuits: function(){
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
                 oRouter.navTo("circuits");
-            }
+            },
+            onPressSeasons: function(){
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
+                oRouter.navTo("seasons");
+            }            
 		});
 	});

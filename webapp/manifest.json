@@ -96,6 +96,13 @@
                     "target": [
                         "circuits"
                     ]
+                },
+        {
+                    "name": "seasons",
+                    "pattern": "seasons",
+                    "target": [
+                        "seasons"
+                    ]
                 }
       ],
       "targets": {
@@ -117,6 +124,10 @@
         "circuits": {
                     "viewType": "XML",
                     "viewName": "circuits"
+                },
+        "seasons": {
+                    "viewType": "XML",
+                    "viewName": "seasons"
                 }
       }
     }
