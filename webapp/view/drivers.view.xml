@@ -4,9 +4,9 @@
     displayBlock="true"
     xmlns="sap.m"
 >
-				<Page id="page" title="Drivers" navButtonPress="handleNavButtonPress" showNavButton="true">
-					<content />
-				</Page>
+	            <Page id="page" title="Drivers" navButtonPress="handleNavButtonPress" showNavButton="true">
+		            <content />
+	            </Page>
 			
 </mvc:View>
 
