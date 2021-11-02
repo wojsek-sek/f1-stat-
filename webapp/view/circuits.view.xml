@@ -4,6 +4,7 @@
     displayBlock="true"
     xmlns="sap.m"
 >
+
     <Page id="page" title="Circuits" navButtonPress="handleNavButtonPress" showNavButton="true">
 		<content />
             <Table id="circuits_table" items="{/MRData/CircuitTable/Circuits}">
@@ -28,6 +29,7 @@
             </Table>
             
 	</Page>
+
 			
 </mvc:View>
 
