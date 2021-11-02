@@ -5,7 +5,9 @@
     xmlns="sap.m"
 >
 				<Page id="page" title="Circuits" navButtonPress="handleNavButtonPress" showNavButton="true">
-					<content />
+					<content>
+                        
+                    </content>
 				</Page>
 			
 </mvc:View>

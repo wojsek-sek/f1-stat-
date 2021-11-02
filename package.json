@@ -31,5 +31,9 @@
 		"dependencies": [
 			"@sap/ux-ui5-tooling"
 		]
+	},
+	"dependencies": {
+		"npm": "^8.1.1",
+		"nvm": "0.0.4"
 	}
 }
