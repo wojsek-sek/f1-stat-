@@ -1,0 +1,38 @@
+<mvc:View
+    controllerName="f1.f1stat.controller.seasons"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Page id="page" title="Seasons" navButtonPress="handleNavButtonPress" showNavButton="true">
+		<content />
+        <VBox class="year">
+            <Text text="Choose year between 1950-2021:"/>
+            <Input id="get_year" placeholder="Enter year"></Input>
+            <Button text="Submit Year" press="onGetYear"></Button>
+        </VBox>
+        <Table id="circuits_table" items="{/MRData/RaceTable/Races}">
+                <columns>
+                    <Column>
+                        <Label text="Round"></Label>
+                    </Column>
+                    <Column>
+                        <Label text="Race Name"></Label>
+                    </Column>
+                    <Column>
+                        <Label text="Date"></Label>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <Text text="{round}"></Text>
+                        <Text text="{raceName}"></Text>
+                        <Text text="{date}"></Text>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+    </Page>
+			
+</mvc:View>
+

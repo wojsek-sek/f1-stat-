@@ -4,11 +4,38 @@
     displayBlock="true"
     xmlns="sap.m"
 >
+<<<<<<< HEAD
 				<Page id="page" title="Circuits" navButtonPress="handleNavButtonPress" showNavButton="true">
 					<content>
                         
                     </content>
 				</Page>
+=======
+    <Page id="page" title="Circuits" navButtonPress="handleNavButtonPress" showNavButton="true">
+		<content />
+            <Table id="circuits_table" items="{/MRData/CircuitTable/Circuits}">
+                <columns>
+                    <Column>
+                        <Label text="Circuit"></Label>
+                    </Column>
+                    <Column>
+                        <Label text="Locality"></Label>
+                    </Column>
+                    <Column>
+                        <Label text="Country"></Label>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <Text text="{circuitName}"></Text>
+                        <Text text="{Location/locality}"></Text>
+                        <Text text="{Location/country}"></Text>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            
+	</Page>
+>>>>>>> 54e9f600eb9e08c460dcf5655085037fba833397
 			
 </mvc:View>
 
