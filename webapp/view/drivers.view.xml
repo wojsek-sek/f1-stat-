@@ -5,7 +5,35 @@
     xmlns="sap.m"
 >
 				<Page id="page" title="Drivers" navButtonPress="handleNavButtonPress" showNavButton="true">
-					<content />
+                
+		            
+					<content>
+                    <SearchField width="90%" class="sapUiSmallMargin" liveChange=".onSearch" />
+                        <Table id="myTable" growing="true" growingScrollToLoad="true" items="{/MRData/DriverTable/Drivers}" >
+                            <columns>
+                                <Column >
+                                    <Label text = "{i18n>FirstName}"></Label>
+                                </Column>
+                                <Column >
+                                    <Label text="{i18n>LastName}"></Label>
+                                </Column>
+                                <Column >
+                                    <Label text="{i18n>Nationality}"></Label>
+                                </Column>
+                                <Column >
+                                    <Label text="{i18n>DateOfBirth}"></Label>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem >
+                                    <Text text="{givenName}"/>
+                                    <Text text="{familyName}"/>
+                                    <Text text="{nationality}"/>
+                                    <Text text="{dateOfBirth}"/>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </content>
 				</Page>
 			
 </mvc:View>
