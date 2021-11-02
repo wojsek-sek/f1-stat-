@@ -26,6 +26,10 @@ sap.ui.define([
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
                 oRouter.navTo("main_view");
             },
+            onPressResults: function(){
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
+                oRouter.navTo("results");
+            },
             onGetYear: function(){ 
             
                 var sYear = this.byId("get_year").getValue(); 
@@ -44,6 +48,8 @@ sap.ui.define([
                 } else { 
                      MessageToast.show("Wrong value");
                 }
+
+                this.byId("get_year").focus()
 
             }
 		});

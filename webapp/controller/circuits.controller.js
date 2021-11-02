@@ -1,11 +1,13 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
+    "sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator",
     "sap/ui/model/json/JSONModel"
 ],
 	/**
 	 * @param {typeof sap.ui.core.mvc.Controller} Controller
 	 */
-	function (Controller,JSONModel) {
+	function (Controller,Filter, FilterOperator,JSONModel) {
 		"use strict";
 
 		return Controller.extend("f1.f1stat.controller.circuits", {
@@ -25,6 +27,22 @@ sap.ui.define([
             handleNavButtonPress: function(){
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
                 oRouter.navTo("main_view");
+            },
+             onSearch: function (oEvent) {
+			// add filter for search
+            var aFilters = [];
+			var sQuery = oEvent.getSource().getValue();
+			if (sQuery && sQuery.length > 0) {
+				var filter = new Filter("circuitName", FilterOperator.Contains, sQuery);
+				aFilters.push(filter);
             }
+
+            
+
+            var oList = this.byId("circuits_table");
+			var oBinding = oList.getBinding("items");
+            oBinding.filter(aFilters, "Application");
+ 
+		}
 		});
 	});

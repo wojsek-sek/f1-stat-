@@ -35,7 +35,9 @@
     animation-name: rotate;
     animation-duration: 0.7s;
 }
-.year{ 
-    width: 250px;
-    
+.text-center{ 
+    text-align: center;
+}
+.button{ 
+    width: 100%;
 }

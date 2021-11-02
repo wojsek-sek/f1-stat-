@@ -103,6 +103,13 @@
                     "target": [
                         "seasons"
                     ]
+                },
+                  {
+                    "name": "results",
+                    "pattern": "results",
+                    "target": [
+                        "results"
+                    ]
                 }
       ],
       "targets": {
@@ -128,6 +135,10 @@
         "seasons": {
                     "viewType": "XML",
                     "viewName": "seasons"
+                },
+        "results": {
+                    "viewType": "XML",
+                    "viewName": "results"
                 }
       }
     }
