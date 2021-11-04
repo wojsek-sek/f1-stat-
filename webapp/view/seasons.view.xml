@@ -11,7 +11,7 @@
             <Input id="get_year" placeholder="Enter year"></Input>
             <Button  class="button" text="Submit Year" press="onGetYear"></Button>
         </VBox>
-        <Table id="circuits_table" items="{/MRData/RaceTable/Races}">
+        <Table id="seasons_table" items="{/MRData/RaceTable/Races}">
                 <columns>
                     <Column>
                         <Label text="Round"></Label>
@@ -24,8 +24,8 @@
                     </Column>
                 </columns>
                 <items>
-                    <ColumnListItem type="Navigation" press="onPressResults">
-                        <Text text="{round}"></Text>
+                    <ColumnListItem >
+                        <Text id="id1" text="{round}"></Text>
                         <Text text="{raceName}"></Text>
                         <Text text="{date}"></Text>
                     </ColumnListItem>

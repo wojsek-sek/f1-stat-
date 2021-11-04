@@ -22,6 +22,10 @@ sap.ui.define([
             onPressSeasons: function(){
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
                 oRouter.navTo("seasons");
-            }            
+            },
+            onPressResults: function(){
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
+                oRouter.navTo("results");
+            }   
 		});
 	});

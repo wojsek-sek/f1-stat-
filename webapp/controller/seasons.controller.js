@@ -21,20 +21,16 @@ sap.ui.define([
 
                 this.getView().setModel(oModel)
 
+
             },
             handleNavButtonPress: function(){
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
                 oRouter.navTo("main_view");
             },
-            onPressResults: function(){
-                var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
-                oRouter.navTo("results");
-            },
             onGetYear: function(){ 
             
-                var sYear = this.byId("get_year").getValue(); 
-                console.log(sYear)
-                
+                let sYear = this.byId("get_year").getValue()
+
                 if(sYear>=1950 && sYear<=2021) {
                     var oModel = new sap.ui.model.json.JSONModel();
 
@@ -49,7 +45,8 @@ sap.ui.define([
                      MessageToast.show("Wrong value");
                 }
 
-                this.byId("get_year").focus()
+                this.byId("get_year").focus();
+
 
             }
 		});

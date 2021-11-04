@@ -12,12 +12,12 @@
 					<content />
                         <Text text="Welcome to F1 statistic App." class="welcome"></Text>
                         <FlexBox class="button-middle">
-                            <Text text="Menu:"></Text>
                             <Button text="Drivers" press="onPressDrivers" class="sapUiMediumMarginBegin"></Button>
                             <Button text="Cicuits" press="onPressCircuits" class="sapUiMediumMarginBegin"></Button>
                             <Button text="Seasons" press="onPressSeasons" class="sapUiMediumMarginBegin"></Button>
+                            <Button text="Results" press="onPressResults" class="sapUiMediumMarginBegin"></Button>
                         </FlexBox>
-                        <Image src="f11.png" class="f1"></Image>
+                        <Image src="assets/f11.png" class="f1"></Image>
 				</Page>
 			</pages>
 		</App>
