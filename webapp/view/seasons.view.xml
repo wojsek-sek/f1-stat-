@@ -11,7 +11,7 @@
             <Input id="get_year" placeholder="Enter year"></Input>
             <Button  class="button" text="Submit Year" press="onGetYear"></Button>
         </VBox>
-        <Table id="seasons_table" items="{/MRData/RaceTable/Races}">
+        <Table id="seasons_table" items="{/MRData/RaceTable/Races}" class="table">
                 <columns>
                     <Column>
                         <Label text="Round"></Label>

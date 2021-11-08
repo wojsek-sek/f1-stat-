@@ -2,7 +2,7 @@
 .button-middle{ 
     position: absolute;
     left: 34%;
-    top: 25%;
+    top: 10%;
     animation-name: rotate;
     animation-duration: 0.7s;
 }
@@ -17,7 +17,7 @@
 .f1{ 
     position: absolute;
     left: 38%;
-    top: 30%;
+    top: 12%;
     width: 300px;
     height: 300px;
     animation-name: rotate;
@@ -25,13 +25,13 @@
 }
 
 .main-back { 
-    background-color: darkgrey;
+    background-color: #7ca5ce;
 }
 .welcome { 
     font-size: large;
     position: absolute;
     left: 42%;
-    top: 15%;
+    top: 5%;
     animation-name: rotate;
     animation-duration: 0.7s;
 }
@@ -40,4 +40,12 @@
 }
 .button{ 
     width: 100%;
+}
+
+.table tr:nth-child(2n-1){ 
+    background-color: #7ca5ce;
+}
+.grid { 
+    position: absolute;
+    top: 40%;
 }

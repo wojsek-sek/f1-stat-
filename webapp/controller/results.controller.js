@@ -31,9 +31,14 @@ sap.ui.define([
                 let sYear = this.byId("get_year").getValue()
                 let sRound = this.byId("get_round").getValue()
 
+                sYear = sYear.trim()
+                sRound = sRound.trim()
+               
+                
                 if((sYear>=1950 && sYear<=2021) && (sRound>=1 && sRound<=24)) {
                     var oModel = new sap.ui.model.json.JSONModel();
                     var oModel2 = new sap.ui.model.json.JSONModel();
+
 
                 fetch('https://ergast.com/api/f1/'+sYear+'/'+sRound+'/results.json')
                     .then(response => response.json())

@@ -15,7 +15,7 @@ sap.ui.define([
 
                 fetch('https://ergast.com/api/f1/2021.json')
                     .then(response => response.json())
-                    .then(data => oModel.setData(data));
+                    .then(data => oModel.setData(data))
 
                 console.log(oModel)
 
@@ -30,6 +30,8 @@ sap.ui.define([
             onGetYear: function(){ 
             
                 let sYear = this.byId("get_year").getValue()
+
+                sYear = sYear.trim()
 
                 if(sYear>=1950 && sYear<=2021) {
                     var oModel = new sap.ui.model.json.JSONModel();

@@ -13,7 +13,7 @@
                         <Text   text="Search by Last Name"></Text>
                         <SearchField width="90%" class="sapUiSmallMargin" liveChange=".onSearch" />
                     </VBox>
-                        <Table id="myTable" growing="true" growingScrollToLoad="true" items="{/MRData/DriverTable/Drivers}" >
+                        <Table id="myTable" growing="true" growingScrollToLoad="true" items="{/MRData/DriverTable/Drivers}" class="table" >
                             <columns>
                                 <Column >
                                     <Label text = "{i18n>FirstName}"></Label>

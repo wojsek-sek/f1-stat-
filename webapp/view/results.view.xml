@@ -12,9 +12,9 @@
                 <Input id="get_year" placeholder="Enter year"></Input>
                  <Text text="Choose year between 1-number of rounds in a given year:"/>
                 <Input id="get_round" placeholder="Enter round"></Input>
-                <Button  class="button" text="Submit Year" press="onGetData"></Button>
+                <Button  class="button" text="Submit Data" press="onGetData"></Button>
             </VBox>
-             <Table id="results_table" items="{/MRData/RaceTable/Races/0/Results}">
+             <Table id="results_table" items="{/MRData/RaceTable/Races/0/Results}" class="table">
                 <columns>
                     <Column>
                         <Label text="Position"></Label>
