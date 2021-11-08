@@ -1,0 +1,24 @@
+<mvc:View
+    controllerName="f1.f1stat.controller.driversDetails"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Page id="driversDetails" title="{driverId}" navButtonPress="handleNavButtonPress" showNavButton="true">
+        <content>
+            <Table items = "{/MRData/DriverTable/Drivers}">
+                <columns>
+                    <Column >
+                        <Label text = "{i18n>Details}"/>
+                    </Column>
+                </columns>
+                <items>
+                <ColumnListItem >
+                    <Text text = "{url}"/>
+                </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+	</Page>
+			
+</mvc:View>

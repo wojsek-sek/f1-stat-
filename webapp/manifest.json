@@ -84,6 +84,13 @@
                     ]
                 },
         {
+                    "name": "driversDetails",
+                    "pattern": "drivers/{driverId}",
+                    "target": [
+                        "driversDetails"
+                    ]
+                },
+        {
                     "name": "main_view",
                     "pattern": "main_view",
                     "target": [
@@ -116,6 +123,10 @@
          "drivers": {
                     "viewType": "XML",
                     "viewName": "drivers"
+                },
+        "driversDetails": {
+                    "viewType": "XML",
+                    "viewName": "driversDetails"
                 },
         "main_view": {
                     "viewType": "XML",
