@@ -19,12 +19,10 @@ sap.ui.define([
                 .then(response => response.json())
                 .then(data => oModel.setData(data));
 
-                this.getView().setModel(oModel);
-
-                var myTable = this.byId("myTable")
+                this.getView().setModel(oModel);    
                 
-                
-                    
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.getRoute("driversDetails").attachPatternMatched(this._onPatternMatched, this);
             },
             handleNavButtonPress: function(){
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
@@ -46,6 +44,20 @@ sap.ui.define([
 			var oBinding = oList.getBinding("items");
             oBinding.filter(aFilters, "Application");
  
-		},
+        },
+
+        _onPatternMatched: function(oEvent) {
+            this.getView().bindElement({
+                path: "//MRData/DriverTable/Drivers('" + oEvent.getParameter("arguments").driverId + "')"
+            });
+        },
+        onDriverPress: function(oEvent) {
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            var driveridD =  oEvent.getSource().getBindingContext().getObject().driverId
+            oRouter.navTo("driversDetails", {
+                driverId: driveridD
+            })
+            localStorage.setItem("driverId", driveridD)
+        }
 		});
 	});

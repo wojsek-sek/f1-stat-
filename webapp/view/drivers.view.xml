@@ -26,7 +26,7 @@
                                 </Column>
                             </columns>
                             <items>
-                                <ColumnListItem >
+                                <ColumnListItem type="Navigation" press="onDriverPress" >
                                     <Text text="{givenName}"/>
                                     <Text text="{familyName}"/>
                                     <Text text="{nationality}"/>
