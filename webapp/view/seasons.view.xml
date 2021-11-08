@@ -6,12 +6,12 @@
 >
 	<Page id="page" title="Seasons" navButtonPress="handleNavButtonPress" showNavButton="true">
 		<content />
-        <VBox class="year">
+        <VBox class="text-center">
             <Text text="Choose year between 1950-2021:"/>
             <Input id="get_year" placeholder="Enter year"></Input>
-            <Button text="Submit Year" press="onGetYear"></Button>
+            <Button  class="button" text="Submit Year" press="onGetYear"></Button>
         </VBox>
-        <Table id="circuits_table" items="{/MRData/RaceTable/Races}">
+        <Table id="seasons_table" items="{/MRData/RaceTable/Races}" class="table">
                 <columns>
                     <Column>
                         <Label text="Round"></Label>
@@ -24,8 +24,8 @@
                     </Column>
                 </columns>
                 <items>
-                    <ColumnListItem>
-                        <Text text="{round}"></Text>
+                    <ColumnListItem >
+                        <Text id="id1" text="{round}"></Text>
                         <Text text="{raceName}"></Text>
                         <Text text="{date}"></Text>
                     </ColumnListItem>

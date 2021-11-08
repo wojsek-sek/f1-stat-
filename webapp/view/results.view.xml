@@ -1,0 +1,64 @@
+<mvc:View
+    controllerName="f1.f1stat.controller.results"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+
+    <Page id="page" title="Results" navButtonPress="handleNavButtonPress" showNavButton="true">
+		<content />
+            <VBox class="text-center">
+                <Text text="Choose year between 1950-2021:"/>
+                <Input id="get_year" placeholder="Enter year"></Input>
+                 <Text text="Choose year between 1-number of rounds in a given year:"/>
+                <Input id="get_round" placeholder="Enter round"></Input>
+                <Button  class="button" text="Submit Data" press="onGetData"></Button>
+            </VBox>
+             <Table id="results_table" items="{/MRData/RaceTable/Races/0/Results}" class="table">
+                <columns>
+                    <Column>
+                        <Label text="Position"></Label>
+                    </Column>
+                    <Column>
+                        <Label text="Number"></Label>
+                    </Column>
+                    <Column>
+                        <Label text="Driver"></Label>
+                    </Column>
+                    <Column>
+                        <Label text="Constructor"></Label>
+                    </Column>
+                    <Column>
+                        <Label text="Laps"></Label>
+                    </Column>
+                    <Column>
+                        <Label text="Grid"></Label>
+                    </Column>
+                    <Column>
+                        <Label text="Time"></Label>
+                    </Column>
+                    <Column>
+                        <Label text="Points"></Label>
+                    </Column>
+                    
+                </columns>
+                <items>
+                    <ColumnListItem >
+                        <Text text="{position}"></Text>
+                        <Text text="{number}"></Text>
+                        <Text text="{parts:[{path:'Driver/givenName'},{path: 'Driver/familyName'}]}"></Text>
+                        <Text text="{Constructor/name}"></Text>
+                        <Text text="{laps}"></Text>
+                        <Text text="{grid}"></Text>
+                        <Text text="{Time/time}"></Text>
+                        <Text text="{points}"></Text>
+                    </ColumnListItem>
+                </items>
+            </Table>
+           
+            
+	</Page>
+
+			
+</mvc:View>
+

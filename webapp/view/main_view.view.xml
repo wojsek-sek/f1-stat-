@@ -3,6 +3,8 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:w="sap.ui.integration.widgets"
     
 >
 	<Shell id="shell">
@@ -10,14 +12,96 @@
 			<pages>
 				<Page id="page" title="{i18n>title}" class="main-back ">        
 					<content />
+                    
                         <Text text="Welcome to F1 statistic App." class="welcome"></Text>
                         <FlexBox class="button-middle">
-                            <Text text="Menu:"></Text>
                             <Button text="Drivers" press="onPressDrivers" class="sapUiMediumMarginBegin"></Button>
                             <Button text="Cicuits" press="onPressCircuits" class="sapUiMediumMarginBegin"></Button>
                             <Button text="Seasons" press="onPressSeasons" class="sapUiMediumMarginBegin"></Button>
+                            <Button text="Results" press="onPressResults" class="sapUiMediumMarginBegin"></Button>
                         </FlexBox>
-                        <Image src="f11.png" class="f1"></Image>
+                        <Image src="assets/f11.png" class="f1"></Image>
+                       <!--
+                        <f:GridContainer class="grid">
+                            	<f:layout>
+                                    <f:GridContainerSettings rowSize="84px" columnSize="84px" gap="8px" />
+                                </f:layout>
+                                <f:layoutXS>
+                                    <f:GridContainerSettings rowSize="70px" columnSize="70px" gap="8px" />
+                                </f:layoutXS>
+                                <Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr"></Text>
+                                <GenericTile 
+                                    header="Sales Fulfillment Application Title"
+                                    subheader="Subtitle">
+                                    <layoutData>
+                                        <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                                    </layoutData>
+                                    <TileContent unit="EUR" footer="Current Quarter">
+                                        <ImageContent src="sap-icon://home-share" />
+                                    </TileContent>
+                                </GenericTile>
+                                <w:Card manifest="test-resources/sap/f/demokit/sample/GridContainer/cardManifest.json">
+                                    <w:layoutData>
+                                        <f:GridContainerItemLayoutData minRows="3" columns="4" />
+                                    </w:layoutData>
+                                </w:Card>
+
+                                <GenericTile header="Manage Activity Master Data Type" subheader="Subtitle">
+                                    <layoutData>
+                                        <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                                    </layoutData>
+                                    <TileContent>
+                                        <ImageContent src="sap-icon://activities" />
+                                    </TileContent>
+                                </GenericTile>
+                                <Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat">
+                                    <layoutData>
+                                        <f:GridContainerItemLayoutData columns="4" />
+                                    </layoutData>
+                                </Text>
+
+                                <GenericTile header="Cumulative Totals" subheader="Subtitle">
+                                    <layoutData>
+                                        <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                                    </layoutData>
+                                    <TileContent unit="Unit" footer="Footer Text">
+                                        <NumericContent value="12" />
+                                    </TileContent>
+                                </GenericTile>
+
+                                <GenericTile header="Travel and Expenses" subheader="Access Concur">
+                                    <layoutData>
+                                        <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                                    </layoutData>
+                                    <TileContent>
+                                        <ImageContent src="sap-icon://travel-expense" />
+                                    </TileContent>
+                                </GenericTile>
+                                	<GenericTile header="Success Map" subheader="Access Success Map">
+                                        <layoutData>
+                                            <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                                        </layoutData>
+                                        <TileContent unit="EUR" footer="Current Quarter">
+                                            <ImageContent src="sap-icon://map-3" />
+                                        </TileContent>
+                                    </GenericTile>
+
+                                    <GenericTile header="My Team Calendar">
+                                        <layoutData>
+                                            <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                                        </layoutData>
+                                        <TileContent unit="EUR" footer="Current Quarter">
+                                            <ImageContent src="sap-icon://check-availability" />
+                                        </TileContent>
+                                    </GenericTile>
+
+                                    <Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat">
+                                        <layoutData>
+                                            <f:GridContainerItemLayoutData columns="4" />
+                                        </layoutData>
+                                    </Text>
+                        </f:GridContainer>
+                        -->
 				</Page>
 			</pages>
 		</App>

@@ -7,7 +7,11 @@
 
     <Page id="page" title="Circuits" navButtonPress="handleNavButtonPress" showNavButton="true">
 		<content />
-            <Table id="circuits_table" items="{/MRData/CircuitTable/Circuits}">
+            <VBox class="text-center" >
+                <Text   text="Search by Circuits"></Text>
+                <SearchField width="90%" class="sapUiSmallMargin" liveChange=".onSearch" />
+            </VBox>
+            <Table id="circuits_table" items="{/MRData/CircuitTable/Circuits}" class="table">
                 <columns>
                     <Column>
                         <Label text="Circuit"></Label>

@@ -8,39 +8,46 @@ sap.ui.define([
 	function (Controller,MessageToast) {
 		"use strict";
 
-		return Controller.extend("f1.f1stat.controller.seasons", {
+		return Controller.extend("f1.f1stat.controller.results", {
 			onInit: function () {
 
                 var oModel = new sap.ui.model.json.JSONModel();
-
-                fetch('https://ergast.com/api/f1/2021.json')
+       
+                fetch('https://ergast.com/api/f1/current/last/results.json')
                     .then(response => response.json())
-                    .then(data => oModel.setData(data))
+                    .then(data => oModel.setData(data));
 
                 console.log(oModel)
 
                 this.getView().setModel(oModel)
-
 
             },
             handleNavButtonPress: function(){
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this); 
                 oRouter.navTo("main_view");
             },
-            onGetYear: function(){ 
+            onGetData: function(){ 
             
                 let sYear = this.byId("get_year").getValue()
+                let sRound = this.byId("get_round").getValue()
 
                 sYear = sYear.trim()
-
-                if(sYear>=1950 && sYear<=2021) {
+                sRound = sRound.trim()
+               
+                
+                if((sYear>=1950 && sYear<=2021) && (sRound>=1 && sRound<=24)) {
                     var oModel = new sap.ui.model.json.JSONModel();
+                    var oModel2 = new sap.ui.model.json.JSONModel();
 
-                fetch('https://ergast.com/api/f1/'+sYear+'.json')
+
+                fetch('https://ergast.com/api/f1/'+sYear+'/'+sRound+'/results.json')
                     .then(response => response.json())
                     .then(data => oModel.setData(data));
 
-                console.log(oModel)
+                fetch('https://ergast.com/api/f1/'+sYear+'.json')
+                    .then(response => response.json())
+                    .then(data => oModel2.setData(data));
+
 
                 this.getView().setModel(oModel)
                 } else { 
